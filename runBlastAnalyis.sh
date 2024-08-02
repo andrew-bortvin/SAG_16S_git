@@ -9,7 +9,7 @@ mkdir iqtreeOut
 mkdir spades_out
 mkdir scaffold_assembly
 
-# BLAST Cyano reads against 
+# BLAST Cyano reads against 16S db
 sbatch --array=1-39 blast_16s_reads.sh
 
 # SPAdes assembly
