@@ -17,6 +17,3 @@ sed -n '1~4s/^@/>/p;2~4p' ${fNamePrefix}_FD_read2.fastq  > ${fNamePrefix}_FD_rea
 sed -i 's/ /_/g' ${fNamePrefix}_FD_read2.fasta
 
 vsearch --threads 30 --usearch_global ${fName} -db ../SILVA_db/SILVA_138.1_SSURef_NR99_CYANO_ONLY.fasta --id 0.9 --blast6out vsearch_out/${fNamePrefix}.b6
-
-rm ${fNamePrefix}_FD_read2.fastq
-rm ${fNamePrefix}_FD_read2.fasta
